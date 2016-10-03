@@ -1,0 +1,29 @@
+from math import sqrt
+
+def is_prime(num):
+    if num <=1:
+        return False;
+    elif num == 2:
+        return True
+    elif num % 2 == 0:
+        return False;
+    else:
+        prime = True;
+        divisor = 3
+        num_d = float(num);
+        upperLimit = int(sqrt(num_d) +1);
+
+        while (divisor <= upperLimit):
+            if (num % divisor == 0):
+                prime = False
+            divisor +=2
+        return prime
+b = ''
+a = 1
+for i in xrange(1200):
+    if is_prime(a) == False:
+        b+='0'
+    else:
+        b+='1'
+    a =(a + 1234567890)%2147483648
+print b

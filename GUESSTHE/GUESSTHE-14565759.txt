@@ -1,0 +1,22 @@
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a%b)
+def lcm(a, b):
+    return (a*b)/gcd(a, b)
+a = str(raw_input())
+while a != '*':
+    s = 1
+    b = True
+    for i in xrange(len(a)):
+        if a[i] == 'Y':
+            s = lcm(s, i+1)
+    for i in xrange(len(a)):
+        if a[i] == 'N':
+            if s%(i+1) == 0:
+                print -1
+                b = False
+                break
+    if b == True:
+        print s
+    a = str(raw_input())

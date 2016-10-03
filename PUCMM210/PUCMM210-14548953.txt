@@ -1,0 +1,5 @@
+import sys
+all = sys.stdin.readlines()
+for i in all[1:]:
+    i = int(i)
+    print (2*i*(i+1)*(i+2)*((i+1)**2 + 2*i*(i+2))/(120))%1000000003

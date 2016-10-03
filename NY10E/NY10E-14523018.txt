@@ -1,0 +1,10 @@
+from operator import mul
+from fractions import Fraction
+
+def nCk(n,k):
+  return int( reduce(mul, (Fraction(n-i, i+1) for i in range(k)), 1) )
+t = int(raw_input())
+while t:
+    t-=1
+    a, b = map(int, raw_input().split())
+    print '%d %d' %( a, nCk(b+9, 9) )

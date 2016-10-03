@@ -1,0 +1,12 @@
+def Trailing_Zeroes(n):
+    i = 1
+    a = 0
+    while 5**i <= n:
+        a+=int(n/(5**i))
+        i+=1
+    return a
+t = int(raw_input())
+while t:
+    t-=1
+    n = int(raw_input())
+    print Trailing_Zeroes(n)

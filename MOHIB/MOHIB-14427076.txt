@@ -1,0 +1,7 @@
+t = int(raw_input())
+while t:
+    t-=1
+    x, avg = map(int, raw_input().split())
+    n = avg - x
+    N = n*(avg+1)
+    print N - (((n-1)*(n))/2)

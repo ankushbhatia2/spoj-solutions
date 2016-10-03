@@ -1,0 +1,11 @@
+from math import e, floor, lgamma, log
+t = int(raw_input())
+while t:
+    t-=1
+    a = int(raw_input())
+    b = int(floor(a*e))
+    while True:
+        if lgamma(b+1) <= b*log(a):
+            print b+1
+            break
+        b-=1

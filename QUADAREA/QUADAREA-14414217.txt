@@ -1,0 +1,8 @@
+from math import sqrt
+t = int(raw_input())
+while t:
+    t-=1
+    a = map(float, raw_input().split())
+    s = float(float(sum(a))/float(2))
+    area = sqrt((s-a[0])*(s-a[1])*(s-a[2])*(s-a[3]))
+    print '%.2f' %area

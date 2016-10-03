@@ -1,0 +1,8 @@
+t = int(raw_input())
+while t:
+    t-=1
+    n, p = map(int, raw_input().split())
+    if n%10 == 0:
+        print 0
+    else:
+        print ((n%10)**(p%4))%10

@@ -1,0 +1,4 @@
+t = int(raw_input())
+for j in xrange(1, t+1):
+    n = int(raw_input())
+    print 'Case %d: %d' %(j, n*2-1)

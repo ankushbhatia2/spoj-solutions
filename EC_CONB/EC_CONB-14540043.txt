@@ -1,0 +1,13 @@
+from math import log
+t = int(raw_input())
+a = []
+while t:
+    t-=1
+    n = int(raw_input())
+    if n%2 == 0:
+        a.append(int(bin(n)[2:][::-1], 2))
+    else:
+        a.append(n)
+for i in a:
+    print i
+

@@ -1,0 +1,10 @@
+t = int(raw_input())
+while t:
+    t-=1
+    n = int(raw_input())
+    b = map(int, raw_input().split())
+    res = 0
+    for i, j in zip(xrange(n>>1), xrange(n-1, -1, -1)):
+        res += ((j - i) * (b[j] - b[i]));
+    print res
+

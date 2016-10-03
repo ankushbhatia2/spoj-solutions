@@ -1,0 +1,5 @@
+t = int(raw_input())
+while t:
+    t-=1
+    n = int(raw_input())
+    print ((n*(n+1)) + (n*(n-1))/2)%1000007

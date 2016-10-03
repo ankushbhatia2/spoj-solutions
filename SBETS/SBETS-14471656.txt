@@ -1,0 +1,35 @@
+import sys
+t = int(sys.stdin.readline())
+while t:
+    t-=1
+    e = {}
+    for i in xrange(16):
+        a, b, c, d = raw_input().split()
+        a = str(a)
+        b = str(b)
+        c = int(c)
+        d = int(d)
+        if a not in e:
+            if c > d:
+                e[a] = 'W'
+            else:
+                e[a] = 'L'
+        else:
+            if c > d:
+                e[a] += 'W'
+            else:
+                e[a] += 'L'
+        if b not in e:
+            if c < d:
+                e[b] = 'W'
+            else:
+                e[b] = 'L'
+        else:
+            if c < d:
+                e[b] += 'W'
+            else:
+                e[b] += 'L'
+    for i in e:
+        if 'L' not in e[i]:
+            print i
+            break

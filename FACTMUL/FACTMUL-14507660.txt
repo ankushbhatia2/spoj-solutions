@@ -1,0 +1,10 @@
+m=109546051211
+n=int(raw_input())
+ans=1
+fact=1
+for i in range(1,n+1):
+    fact=(fact*i)%m
+    ans=(ans*fact)%m
+    if(ans==0):
+    	break
+print ans

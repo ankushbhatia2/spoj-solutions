@@ -1,0 +1,11 @@
+package main
+import "fmt"
+
+func main(){
+	var t int
+	fmt.Scan(&t)
+	for t!=42{
+		fmt.Println(t)
+		fmt.Scan(&t)
+	}
+}

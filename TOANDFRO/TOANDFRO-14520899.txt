@@ -1,0 +1,22 @@
+n = int(raw_input())
+while n:
+    a = str(raw_input())
+    b = 0
+    col = len(a)/n
+    c = [' ']*len(a)
+    j = 0
+    for i in xrange(len(a)):
+        if b%2 == 0:
+            c[col*j + b] = a[i]
+            j+=1
+            if j == n:
+                j = n - 1
+                b+=1
+        elif b%2 == 1:
+            c[col*j + b] = a[i]
+            j-=1
+            if j == -1:
+                j = 0
+                b+=1
+    print ''.join(c)
+    n = int(raw_input())

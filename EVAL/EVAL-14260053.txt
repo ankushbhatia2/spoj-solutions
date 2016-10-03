@@ -1,0 +1,2 @@
+from math import log
+print '%.51f' %2**(1/log(2))

@@ -1,0 +1,29 @@
+def powLF(n):
+    if n == 1:     return (1, 1)
+    L, F = powLF(n//2)
+    L, F = (L**2 + 5*F**2) >> 1, L*F
+    if n & 1:
+        return ((L + 5*F)>>1, (L + F) >>1)
+    else:
+        return (L, F)
+
+def fib(n):
+    if n & 1:
+        return powLF(n)[1]
+    else:
+        L, F = powLF(n // 2)
+        return L * F
+t = int(raw_input())
+while t:
+    t-=1
+    a = int(raw_input())
+    if a == 1:
+        print 0
+    else:
+        a = a%60
+        if a == 0:
+            print fib(59)%10
+        elif a == 1:
+            print fib(60)%10
+        else:
+            print fib(a-1)%10

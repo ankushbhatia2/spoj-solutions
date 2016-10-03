@@ -1,0 +1,21 @@
+t = int(raw_input())
+while t:
+    t-=1
+    a = int(raw_input())
+    b = (a*4*2)+1
+    if int(b**float(0.5))**2 != b:
+        b = int(b**float(0.5))
+        #print b
+        b = int((b-1)/2)+1
+        #print b
+    else:
+        b = int(b**float(0.5))
+        b = int((b-1)/2)
+    c = (b*(b+1)/2) - a + 1
+    #print c
+    d = (b*(b+1)/2) - (b*(b-1)/2) - c + 1
+    #print c
+    if b%2 == 0:
+        print 'TERM %d IS %d/%d' %(a, d, c)
+    else:
+        print 'TERM %d IS %d/%d' %(a, c, d)

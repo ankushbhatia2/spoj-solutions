@@ -1,0 +1,8 @@
+t = int(raw_input())
+a = []
+while t:
+    t-=1
+    b = int(raw_input())
+    if b > 0:
+        a.append(b)
+print sum(a)

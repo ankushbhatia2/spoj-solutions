@@ -1,0 +1,15 @@
+import sys
+a = []
+def catalan_number(n):
+    nm = dm = 1
+    for k in range(2, n+1):
+      nm, dm = ( nm*(n+k), dm*k )
+    a.append((nm/dm)%100007)
+for i in xrange(1, 1001):
+    catalan_number(i)
+t = int(sys.stdin.readline())
+while t:
+    t-=1
+    n = int(sys.stdin.readline()) - 2
+    print int(a[n-1])
+

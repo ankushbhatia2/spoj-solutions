@@ -1,0 +1,8 @@
+t = int(raw_input())
+while t:
+    t-=1
+    a = int(raw_input())
+    b = 0.0
+    for i in xrange(1, a+1):
+        b+=float(float(a)/float(i))
+    print '%.2f' % b

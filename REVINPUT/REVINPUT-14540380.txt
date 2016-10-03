@@ -1,0 +1,13 @@
+n = int(raw_input())
+b = []
+while True:
+    try:
+        a = (str(raw_input())).split()
+        b.append(a)
+    except EOFError:
+        break
+for i in b[::-1]:
+    for j in i[::-1]:
+        for k in xrange(n):
+            print j[::-1],
+    print
